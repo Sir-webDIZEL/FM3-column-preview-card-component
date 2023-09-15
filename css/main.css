@@ -1,0 +1,112 @@
+/*(paragraphs)*/
+/*(background, headings, buttons)*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.column__cards {
+  margin: 1.5em;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.column__cards .column__card {
+  padding: 3em;
+}
+.column__cards .column__card--first {
+  background-color: hsl(31, 77%, 52%);
+}
+.column__cards .column__card--second {
+  background-color: hsl(184, 100%, 22%);
+}
+.column__cards .column__card--third {
+  background-color: hsl(179, 100%, 13%);
+}
+.column__cards .column__card-info-title {
+  padding: 0.6em 0;
+  font-size: 4.6rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+}
+.column__cards .column__card-info-text {
+  margin-bottom: 2em;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 25px;
+}
+.column__cards .column__card-btn {
+  padding: 1em 2em;
+  font-size: 1.6rem;
+  background-color: hsl(0, 0%, 95%);
+  border: 0.5px solid hsl(0, 0%, 95%);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+.column__cards .column__card-btn--first {
+  color: hsl(31, 77%, 52%);
+}
+.column__cards .column__card-btn--second {
+  color: hsl(184, 100%, 22%);
+}
+.column__cards .column__card-btn--third {
+  color: hsl(179, 100%, 13%);
+}
+.column__cards .column__card-btn:hover {
+  color: hsl(0, 0%, 95%);
+  background-color: transparent;
+}
+
+.attribution {
+  padding: 3em 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .column__cards {
+    display: flex;
+  }
+  .column__cards .column-card {
+    width: 313px;
+  }
+}
+@media (min-width: 992px) {
+  .column__cards {
+    width: 939px;
+  }
+  .column__cards .column__card-btn {
+    margin-top: 4em;
+  }
+}/*# sourceMappingURL=main.css.map */

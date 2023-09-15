@@ -1,0 +1,131 @@
+@use 'colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Lexend Deca', sans-serif;
+	background-color: $Very-light-gray;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.column__cards {
+	// width: 313px;
+	margin: 1.5em;
+	font-size: 1.5rem;
+	border-radius: 10px;
+	overflow: hidden;
+
+	.column__card {
+		padding: 3em;
+
+		&--first {
+			background-color: $Bright-orange;
+		}
+		&--second {
+			background-color: $Dark-cyan;
+		}
+		&--third {
+			background-color: $Very-dark-cyan;
+		}
+
+		&-info {
+			&-title {
+				padding: 0.6em 0;
+				font-size: 4.6rem;
+				text-transform: uppercase;
+				color: $Very-light-gray;
+				font-family: 'Big Shoulders Display', cursive;
+			}
+
+			&-text {
+				margin-bottom: 2em;
+				color: $Transparent-white;
+				line-height: 25px;
+			}
+		}
+
+		&-btn {
+			padding: 1em 2em;
+			font-size: 1.6rem;
+			background-color: $Very-light-gray;
+			border: 0.5px solid $Very-light-gray;
+			border-radius: 30px;
+			cursor: pointer;
+			transition: color 0.3s, background-color 0.3s;
+
+			&--first {
+				color: $Bright-orange;
+			}
+			&--second {
+				color: $Dark-cyan;
+			}
+			&--third {
+				color: $Very-dark-cyan;
+			}
+
+			&:hover {
+				color: $Very-light-gray;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.attribution {
+	padding: 3em 0;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+// --MEDIA--
+@media (min-width: 768px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.column__cards {
+		display: flex;
+
+		.column-card {
+			width: 313px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.column__cards {
+		width: 939px;
+		.column__card {
+			&-btn {
+				margin-top: 4em;
+			}
+		}
+	}
+}
